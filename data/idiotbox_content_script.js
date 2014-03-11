@@ -4,14 +4,17 @@
 var regexp = /^http:\/\/www\.bbc\.co\.uk\/iplayer\/episode\/([^\/]*)\//;
 var pid = regexp.exec(document.location.href)[1];
 
+var icon = document.createElement("i");
+icon.setAttribute("class", "icon tviplayericon tviplayericon-download");
+
 var link = document.createElement('a');
+link.setAttribute("class", "link")
 link.href = 'http://idiotboxproxy.aws.af.cm/iplayer/pid/' + pid;
-link.textContent = "IdiotBox";
+link.textContent = "Play on IdiotBox";
+link.appendChild(icon);
 
 var list_item = document.createElement('li');
-list_item.setAttribute('style', 'margin-left: 30px;');
-list_item.appendChild(document.createTextNode(' '));
 list_item.appendChild(link);
 
-var heading_list = document.getElementById('blq-local-nav');
-heading_list.appendChild(list_item);
+var heading_list = document.getElementById("external").getElementsByTagName("ul")[0];
+heading_list.insertBefore(list_item, heading_list.firstChild);

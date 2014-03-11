@@ -1,0 +1,10 @@
+{
+  "name": "idiotbox_firefox",
+  "title": "BBC iPlayer Idiotbox",
+  "id": "jid1-wT0WjBNFp2r8vw",
+  "description": "Use Idiotbox with the BBC iPlayer website",
+  "author": "sneakypete81",
+  "license": "GPL 2.0",
+  "version": "0.2",
+  "dependencies": ["api-utils", "addon-kit"]
+}
